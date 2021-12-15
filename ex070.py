@@ -6,14 +6,12 @@ while True:
     count1 += 1
     if preco > 1000:
         count += 1
-    if count1 == 1:
+    if count1 == 1 or preco < maior:
         nome = produto
         maior = preco
-    else:
-        if preco < maior:
-            maior = preco
-            nome = produto
-    c = input('Quer continuar? [S/N] ')
+    c = ' '
+    while c not in 'SN':
+        c = str(input('Quer continuar? [S/N] ')).strip().upper()[0]
     if c == 'N':
         break
 print(f'O total da compra foi de R$ {s:.2f}')

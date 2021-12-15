@@ -3,12 +3,16 @@ while True:
     idade = int(input('Idade: '))
     if idade > 18:
         count18 += 1
-    sexo = input('Sexo [M/F]: ')
+    sexo = ' '
+    while sexo not in 'MF':
+        sexo = str(input('Sexo: [M/F] ')).strip().upper()[0]
     if sexo == 'M':
         countm += 1
     if sexo == 'F' and idade < 20:
         countm20 += 1
-    c = input('Quer continuar? [S/N] ')
+    c = ' '
+    while c not in 'SN':
+        c = str(input('Quer continuar? [S/N] ')).strip().upper()[0]
     if c == 'N':
         break
 print(f'Total de pessoas com mais de 18 anos: {count18}')

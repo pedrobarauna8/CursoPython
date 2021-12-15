@@ -3,7 +3,9 @@ count = 0
 while True:
     nu = int(input('Digite um número de 0 a 10: '))
     npc = randint(0, 10)
-    u = input('ímpar ou Par? [I/P]: ')
+    u = ' '
+    while u not in 'PI':
+        u = str(input('ímpar ou Par? [I/P]: ')).strip().upper()[0]
     n = nu + npc
     print(f'Você jogou {nu} e o computador {npc}. O total é {n}')
     if n % 2 == 0 and u == 'P':
