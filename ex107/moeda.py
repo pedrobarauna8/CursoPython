@@ -1,14 +1,18 @@
-def metade(n):
-    return n * 0.50
+def metade(preco):
+    res = preco * 0.50
+    return res
 
 
-def dobro(n):
-    return n * 2
+def dobro(preco):
+    res = preco * 2
+    return res
 
 
-def aumentar(n, p):
-    return n * ((p/100) + 1)
+def aumentar(preco, taxa):
+    res = preco * ((taxa/100) + 1)
+    return res
 
 
-def diminuir(n, p):
-    return n - (n * (p/100))
+def diminuir(preco, taxa):
+    res = preco - (preco * (taxa/100))
+    return res
