@@ -6,7 +6,6 @@ def leiaInt(n=0):
     return n
 
 
-
 # Programa Principal
 n = leiaInt('Digite um número: ')
 print(f'Você acabou de digitar o número {n}')
